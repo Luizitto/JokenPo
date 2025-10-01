@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: "Libertinus Keyboard", system-ui;
+    text-transform: uppercase;
+
+}
+
+
+
+body {
+    background-image: url(./assets/img/wallpapersec.png);
+    background-size: cover;
+    color: #ffffff;
+    height: 100vh;
+    cursor: default;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 90px;
+    width: 100%;
+}
+
+
+.garras {
+    width: 100%;
+    display: flex;
+    left: 0;
+    margin-top: -90px;
+}
+
+img {
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    height: auto;
+    object-fit: cover;
+
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transition: all 0.1s ease-in-out;
+    filter: brightness(0.8);
+    opacity: 0.6;
+}
+
+
+span {
+    color: #1800f3;
+}
+
+#scoreMachine {
+    color: rgb(12, 4, 129);
+}
+
+.claw-esquerda {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: -1;
+}
+
+.claw-direita {
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+    z-index: -1;
+
+}
+
+.claw-img {
+    width: 350px;
+}
+
+.letsgo {
+    font-family: "Wendy One", sans-serif;
+    font-size: 28px;
+    padding: 10px;
+    color: black;
+}
+
+.paragrafo {
+    font-family: "Wendy One", sans-serif;
+}
+
+
+
+@media (max-width: 600px) {
+    .claw-esquerda {
+        width: 200px;
+        right: 10px;
+        top: 75px;
+    }
+
+    .claw-direita {
+        width: 200px;
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .claw-img {
+        width: 200px;
+    }
+
+    .buttons {
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 70px;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    .letsgo {
+        font-size: 20px;
+        top: 40px;
+        position: absolute;
+        color: black;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}

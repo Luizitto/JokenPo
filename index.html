@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoPÔ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/fivcon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="responsivo.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>DINOPô</h1>
+
+        <div class="buttons">
+            <button id="rock" onclick="playhuman('rock')"> <img src="./assets/img/pedra.png" alt="img-pedra"></button
+                class="img-button">
+            <button id="paper" onclick="playhuman('paper')"> <img src="./assets/img/papel.png" alt="img-papel"></button
+                class="img-button">
+            <button id="scissors" onclick="playhuman('scissors')"> <img src="./assets/img/tesoura.png"
+                    alt="img-tesoura"></button class="img-button">
+
+
+        </div>
+
+        <p class="letsgo">Vamos Jogar? 🤓</p>
+        <p class="paragrafo">Sua pontuação: <span id="scoreUser">0</span></p>
+        <p class="paragrafo">pontuação da maquina: <span id="scoreMachine">0</span></p>
+
+
+
+        <div class="claws">
+            <div class="claw-esquerda">
+                <img src="./assets/img/esquerda.png" alt="garra-esquerda" class="claw-img">
+            </div>
+
+            <div class="claw-direita">
+                <img src="./assets/img/direita.png" alt="garra-direita" class="claw-img">
+            </div>
+
+
+        </div>
+
+
+
+
+        <script src="./scripts.js"></script>
+</body>
+
+</html>
