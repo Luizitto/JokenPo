@@ -35,6 +35,31 @@ body {
     width: 100%;
 }
 
+.audio-control {
+    margin-top: 20px;
+}
+
+.audio-control button {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    color: #ffffff;
+    font-family: "Wendy One", sans-serif;
+    font-size: 16px;
+    padding: 12px 24px;
+    margin-top: 25px;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.audio-control button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.audio-control button:active {
+    transform: translateY(0);
+}
 
 .garras {
     width: 100%;
@@ -68,6 +93,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
+    border-radius: 20px;
 }
 
 button:active {
@@ -79,10 +105,14 @@ button:active {
 
 span {
     color: #1800f3;
+    font-family: "Wendy One", sans-serif;
+    padding: 10px;
 }
 
 #scoreMachine {
-    color: rgb(12, 4, 129);
+    color: red;
+    font-family: "Wendy One", sans-serif;
+    padding: 10px;
 }
 
 .claw-esquerda {
@@ -138,11 +168,11 @@ span {
         align-items: center;
         flex-direction: column;
         gap: 12px;
-        margin-top: 70px;
+        margin-top: 50px;
     }
 
     img {
-        width: 140px;
+        width: 100px;
     }
 
     .letsgo {
@@ -156,4 +186,55 @@ span {
         font-size: 18px;
         margin-top: 10px;
     }
+
+    .audio-control button {
+        margin-top: 3px;
+    }
+
+
+
+}
+
+
+@media (max-width: 380px) {
+    .claw-esquerda {
+        width: 200px;
+        right: 10px;
+        top: 75px;
+    }
+
+    .claw-direita {
+        width: 200px;
+        left: 10px;
+        bottom: 20px;
+    }
+
+    .claw-img {
+        width: 200px;
+    }
+
+    .buttons {
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 100px;
+    }
+
+    img {
+        width: 90px;
+    }
+
+    .letsgo {
+        font-size: 20px;
+        top: 40px;
+        position: absolute;
+        color: black;
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+
 }

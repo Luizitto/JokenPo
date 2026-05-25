@@ -1,16 +1,38 @@
 const letsgo = document.querySelector('.letsgo')
 const scoreUser = document.querySelector('#scoreUser')
 const scoreMachine = document.querySelector('#scoreMachine')
-
+const backgroundAudio = document.querySelector('#background-audio')
+const audioToggle = document.querySelector('#audioToggle')
 
 let userScore = 0
 let machineScore = 0
 
+const setAudioButtonText = () => {
+    if (!audioToggle) return
+    audioToggle.textContent = backgroundAudio && !backgroundAudio.paused ? 'Pausar som' : 'Ouvir trilha sonora'
+}
+
+if (audioToggle && backgroundAudio) {
+    audioToggle.addEventListener('click', () => {
+        if (backgroundAudio.paused) {
+            backgroundAudio.play().then(setAudioButtonText).catch(() => {})
+        } else {
+            backgroundAudio.pause()
+            setAudioButtonText()
+        }
+    })
+}
+
+const tryAutoPlayAudio = () => {
+    if (backgroundAudio && backgroundAudio.paused) {
+        backgroundAudio.play().then(setAudioButtonText).catch(() => {})
+    }
+}
 
 const playhuman = (humanChoice) => {
 
+    tryAutoPlayAudio()
     playgame(humanChoice, playmachine())
-
 
 }
 
